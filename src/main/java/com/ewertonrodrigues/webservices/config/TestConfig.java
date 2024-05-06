@@ -17,10 +17,10 @@ public class TestConfig implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		
+
 		User u1 = new User(null, "Linux Tovald", "linux@gmail.com", "21365478", "123456");
 		User u2 = new User(null, "Bill Gates", "william@gmail.com", "41253698", "111009");
-		
-		userRepository.saveAll(Arrays.asList(u1,u2));
+
+		userRepository.saveAll(Arrays.asList(u1, u2));
 	}
 }
