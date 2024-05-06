@@ -17,8 +17,8 @@ public class User implements Serializable{
 	
 	
 	@jakarta.persistence.Id
-	@GeneratedValue(strategy = GenerationType.UUID)
-	private String id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	
 	private String name;
 	private String email;
@@ -30,7 +30,7 @@ public class User implements Serializable{
 		
 	}
 
-	public User(String id, String name, String email, String phone, String password) {
+	public User(Long id, String name, String email, String phone, String password) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -39,11 +39,11 @@ public class User implements Serializable{
 		this.password = password;
 	}
 
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
