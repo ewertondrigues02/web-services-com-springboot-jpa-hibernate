@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 import com.ewertonrodrigues.webservices.entities.Order;
 import com.ewertonrodrigues.webservices.entities.User;
+import com.ewertonrodrigues.webservices.entities.enums.OrderStatus;
 import com.ewertonrodrigues.webservices.repositories.OrderRepository;
 import com.ewertonrodrigues.webservices.repositories.UserRepository;
 
@@ -24,12 +25,15 @@ public class TestConfig implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
+		userRepository.deleteAll();
+		orderRepository.deleteAll();
+		
 		User u1 = new User(null, "Linux Tovald", "linux@gmail.com", "21365478", "123456");
 		User u2 = new User(null, "Bill Gates", "william@gmail.com", "41253698", "111009");
 
-		Order o1 = new Order(null, Instant.parse("2019-06-20T19:53:07Z"), u1);
-		Order o2 = new Order(null, Instant.parse("2019-07-21T03:42:10Z"), u2);
-		Order o3 = new Order(null, Instant.parse("2019-07-22T15:21:22Z"), u1);
+		Order o1 = new Order(null, Instant.parse("2019-06-20T19:53:07Z"),OrderStatus.PAID, u1);
+		Order o2 = new Order(null, Instant.parse("2019-07-21T03:42:10Z"),OrderStatus.WAITING_PAYMENT, u2);
+		Order o3 = new Order(null, Instant.parse("2019-07-22T15:21:22Z"),OrderStatus.WAITING_PAYMENT, u1);
 
 		userRepository.saveAll(Arrays.asList(u1, u2));
 		orderRepository.saveAll(Arrays.asList(o1, o2, o3));
