@@ -1,5 +1,7 @@
 # Big Game Survey 
-[![NPM](https://img.shields.io/npm/l/react)]((https://github.com/ewertondrigues02/web-services-com-springboot-jpa-hibernate/blob/master/LICENSE)) 
+![Static Badge](https://img.shields.io/badge/!%5BStatic%20Badge%5D(https%3A%2F%2Fimg.shields.io%2Fbadge%2FLICENCE%2520MIT))
+
+
 
 # Sobre o projeto
 
