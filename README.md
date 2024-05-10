@@ -1,79 +1,27 @@
-# Big Game Survey 
+# Back end 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/ewertondrigues02/web-services-com-springboot-jpa-hibernate/blob/master/LICENSE) 
 
+Diagrama de modelo de domínio para um sistema de software. Ele representa várias entidades e seus relacionamentos. Aqui estão os principais pontos:
+![Captura de tela 2024-05-10 074455](https://github.com/ewertondrigues02/web-services-com-springboot-jpa-hibernate/assets/106437473/d02c7484-1852-40fb-9469-bee7d76bb6c9)
+
+### Entidades:
+ * Produto: Possui atributos como id (inteiro), nome (string), descrição (string), preço (double), imageUrl (string) e categorias.
+ * Categoria: Relacionada a produtos por meio de uma relação muitos-para-muitos.
+ * Item de Pedido: Relacionado a produtos e pedidos por meio de relações muitos-para-um.
+ * Pedido: Relacionado a itens de pedido e usuários.
+ * Usuário: Não há detalhes específicos sobre os atributos do usuário.
+ * Pagamento: Relacionado ao pedido e possui um atributo de status (enumeração).
+### Relacionamentos:
+ * Produto-Categoria: Muitos-para-muitos.
+ * Item de Pedido-Produto: Muitos-para-um.
+ * Item de Pedido-Pedido: Muitos-para-um.
+   
+Esse diagrama é relevante para entender como os componentes de um sistema de e-commerce podem ser estruturados em termos de gerenciamento de dados e fluxo. Ele também mostra como o processamento de pedidos pode ser tratado por meio de status. 
+
+---
+### Domain Instance
+
+![Captura de tela 2024-05-10 075820](https://github.com/ewertondrigues02/web-services-com-springboot-jpa-hibernate/assets/106437473/f1e4cfa5-4c6c-45f5-bf2d-d18f33fcf9e3)
 
 
-# Sobre o projeto
 
-https://wmazoni-sds1.netlify.app
-
-Big Game Survey é uma aplicação full stack web e mobile construída durante a 1ª edição da **Semana DevSuperior** (#sds1), evento organizado pela [DevSuperior](https://devsuperior.com "Site da DevSuperior").
-
-A aplicação consiste em uma pesquisa de preferência de games, onde os dados são coletados no app mobile, e depois são listados no app web, que também apresenta um dashboard com gráficos baseados nestes dados.
-
-## Layout mobile
-![Mobile 1](https://github.com/acenelio/assets/raw/main/sds1/mobile1.png) ![Mobile 2](https://github.com/acenelio/assets/raw/main/sds1/mobile2.png)
-
-## Layout web
-![Web 1](https://github.com/acenelio/assets/raw/main/sds1/web1.png)
-
-![Web 2](https://github.com/acenelio/assets/raw/main/sds1/web2.png)
-
-## Modelo conceitual
-![Modelo Conceitual](https://github.com/acenelio/assets/raw/main/sds1/modelo-conceitual.png)
-
-# Tecnologias utilizadas
-## Back end
-- Java
-- Spring Boot
-- JPA / Hibernate
-- Maven
-## Front end
-- HTML / CSS / JS / TypeScript
-- ReactJS
-- React Native
-- Apex Charts
-- Expo
-## Implantação em produção
-- Back end: Heroku
-- Front end web: Netlify
-- Banco de dados: Postgresql
-
-# Como executar o projeto
-
-## Back end
-Pré-requisitos: Java 11
-
-```bash
-# clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
-
-# entrar na pasta do projeto back end
-cd backend
-
-# executar o projeto
-./mvnw spring-boot:run
-```
-
-## Front end web
-Pré-requisitos: npm / yarn
-
-```bash
-# clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
-
-# entrar na pasta do projeto front end web
-cd front-web
-
-# instalar dependências
-yarn install
-
-# executar o projeto
-yarn start
-```
-
-# Autor
-
-Wellington Mazoni de Andrade
-
-https://www.linkedin.com/in/wmazoni
