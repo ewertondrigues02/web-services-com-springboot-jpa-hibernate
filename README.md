@@ -1,5 +1,5 @@
 # Big Game Survey 
-[![NPM](https://img.shields.io/npm/l/react)]([https://github.com/devsuperior/sds1-wmazoni/blob/master/LICENSE](https://github.com/ewertondrigues02/web-services-com-springboot-jpa-hibernate/blob/master/LICENSE)) 
+[![NPM](https://img.shields.io/npm/l/react)]((https://github.com/ewertondrigues02/web-services-com-springboot-jpa-hibernate/blob/master/LICENSE)) 
 
 # Sobre o projeto
 
