@@ -38,13 +38,19 @@ public class UserService {
 		} catch (DataIntegrityViolationException e) {
 			throw new DatabaseException(e.getMessage());
 		}
-		
+
 	}
 
 	public User update(Long id, User obj) {
-		User entity = repository.getReferenceById(id);
-		updateData(entity, obj);
-		return repository.save(entity);
+		try {
+			User entity = repository.getReferenceById(id);
+			updateData(entity, obj);
+			return repository.save(entity);
+		} catch (RuntimeException e) {
+			e.printStackTrace();
+			throw new DatabaseException(e.getMessage());
+		}
+
 	}
 
 	private void updateData(User entity, User obj) {
